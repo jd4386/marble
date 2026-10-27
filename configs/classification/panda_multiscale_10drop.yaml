@@ -1,0 +1,18 @@
+# Paper main: PANDA multiscale (5×/20×) with 10% zero-scale drop.
+dataset: PANDA
+levels_sub_dirs: [level_1_5x, level_0_20x]
+scale_factors: [1, 4]
+patch_size: 256
+batch_size: 1
+epochs: 100
+removal_fraction: 0.1
+embedding_dim: 1024
+base_lr: 3.0e-5
+weight_decay: 0.01
+warmup_epochs: 5
+patience: 10
+use_amp: false
+model_save_path: checkpoints/classification/weights/MARBLE_PANDA_multiscale_10drop.pth
+# Override at runtime:
+#   labels_csv, multi_scale_features_dir, autogen_csv_path
+# splits_path is optional / ignored for PANDA (internal 80/10/10 stratified split).

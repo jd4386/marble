@@ -1,0 +1,12 @@
+# Pinned to a known-working MARBLE training environment (torch 2.4.0+cu121).
+# mamba-ssm requires a matching CUDA toolkit / GPU build; a CPU-only wheel will not work.
+# Prefer: pip install -e .  (also installs PyYAML and registers marble-train)
+torch==2.4.0
+mamba-ssm==2.2.4
+h5py==3.13.0
+pandas==2.2.3
+numpy==2.2.5
+scikit-learn==1.6.1
+scikit-survival==0.24.1
+tqdm==4.67.1
+PyYAML>=6.0

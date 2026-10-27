@@ -1,0 +1,16 @@
+*.pth
+__pycache__/
+*.py[cod]
+logs/
+*.out
+.ipynb_checkpoints/
+.pytest_cache/
+*.egg-info/
+.DS_Store
+build/
+dist/
+.eggs/
+*.egg
+.venv/
+venv/
+.env

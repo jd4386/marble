@@ -1,0 +1,17 @@
+# Paper: TCGA-LUAD survival multiscale (10×/40×) with 10% drop.
+dataset: TCGA_SURVIVAL
+levels_sub_dirs: [level_1_10x, level_0_40x]
+scale_factors: [1, 4]
+patch_size: 256
+batch_size: 1
+epochs: 100
+removal_fraction: 0.1
+embedding_dim: 1024
+base_lr: 3.0e-5
+weight_decay: 0.01
+warmup_epochs: 5
+patience: 10
+use_amp: false
+model_save_path: checkpoints/survival/weights/MARBLE_TCGA_LUAD_survival_multiscale_10drop.pth
+# Override: labels_csv, multi_scale_features_dir, autogen_csv_path, splits_path (directory)
+# Note: 5-fold training overwrites model_save_path each fold (last fold retained on disk).

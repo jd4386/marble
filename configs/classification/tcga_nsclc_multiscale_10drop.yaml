@@ -1,0 +1,16 @@
+# Paper main: TCGA-NSCLC multiscale (10×/40×) with 10% zero-scale drop.
+dataset: TCGA_NSCLC
+levels_sub_dirs: [level_1_10x, level_0_40x]
+scale_factors: [1, 4]
+patch_size: 256
+batch_size: 1
+epochs: 100
+removal_fraction: 0.1
+embedding_dim: 1024
+base_lr: 3.0e-5
+weight_decay: 0.01
+warmup_epochs: 5
+patience: 10
+use_amp: false
+model_save_path: checkpoints/classification/weights/MARBLE_TCGA_NSCLC_multiscale_10drop.pth
+# Override at runtime: labels_csv, multi_scale_features_dir, splits_path
